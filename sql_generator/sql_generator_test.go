@@ -1,4 +1,4 @@
-package sqlgenerator
+package sql_generator
 
 import (
 	"testing"

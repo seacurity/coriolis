@@ -6,7 +6,7 @@ import (
 
 	"github.com/seacurity/coriolis/parser"
 	"github.com/seacurity/coriolis/scheduler"
-	"github.com/seacurity/coriolis/sqlgenerator"
+	"github.com/seacurity/coriolis/sql_generator"
 )
 
 func main() {
@@ -16,7 +16,7 @@ func main() {
 		log.Fatalf("Error parsing Sigma rule: %v", err)
 	}
 
-	sqlQuery, err := sqlgenerator.GenerateSQL(rule)
+	sqlQuery, err := sql_generator.GenerateSQL(rule)
 	if err != nil {
 		log.Fatalf("Error generating SQL query: %v", err)
 	}
@@ -31,7 +31,7 @@ func main() {
 			return
 		}
 
-		sqlQuery, err := sqlgenerator.GenerateSQL(rule)
+		sqlQuery, err := sql_generator.GenerateSQL(rule)
 		if err != nil {
 			log.Printf("Error generating SQL query: %v", err)
 			return

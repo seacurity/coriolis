@@ -1,4 +1,4 @@
-module coriolis
+module github.com/seacurity/coriolis
 
 go 1.22.4
 
